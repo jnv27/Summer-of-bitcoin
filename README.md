@@ -6,7 +6,7 @@ This repository consists of the solution to the summer of bitcoin challange.
 
 [Problem Statement](https://drive.google.com/drive/folders/12iqp3CvEPSIVgUIgAaJWe6fVKCL3-Y15?_hsmi=133809050&_hsenc=p2ANqtz-9vbcjhSKpq58j3nutFGIA4UUS9h-vgjoXA56Y0EpMim0nxM8uqzJKbc6UovDVPIjhJ9cKzYKGQfXg8vPFeOZ3nG5oR8g)
 
-## Solution Approach [Solution file](https://github.com/Vishal1003/Summer-of-Bitcoin-21/blob/master/Solution.java)
+## Solution Approach [Solution file](https://github.com/jnv27/Summer-of-bitcoin/blob/main/Solution.java)
 
 Problem Statement Explanation -> We have a few transactions (let us call these as nodes) which have a fee, weight and parents list(nodes) associated with it. We have to find a block which have the maximum fees of all possible blocks with weight less than 4000000. 
 
@@ -29,8 +29,8 @@ Problem Statement Explanation -> We have a few transactions (let us call these a
 
 ### Weight and Fee of the current block
 
-![image](https://github.com/Vishal1003/Summer-of-Bitcoin-21/blob/master/docs/output.png)
+![image](https://github.com/jnv27/Summer-of-bitcoin/blob/main/output.jpeg)
 
 ### Block file
 
-[Block.txt](https://github.com/Vishal1003/Summer-of-Bitcoin-21/blob/master/docs/block.txt)
+[Block.txt](https://github.com/jnv27/Summer-of-bitcoin/blob/main/block.txt)
