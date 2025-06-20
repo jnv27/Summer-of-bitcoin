@@ -25,6 +25,7 @@ class Node {
 	}	
 }
 
+// hi
 public class Solution {
 		
 	private Map<String, Node> map;
@@ -34,6 +35,41 @@ public class Solution {
 	private List<Node> topList;
 
 	// creating Nodes based on the file data
+	private void fetchTransactions(String src) {
+		this.fileData = new ArrayList<>();
+		this.map = new HashMap<>();
+		Scanner s = null;
+		try {
+			s = new Scanner(new File(src));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+		int line = 0;
+		while (s.hasNext()) {
+			if (line == 0) {
+				s.nextLine();
+				line++;
+			}
+
+			String[] input = s.nextLine().split(",");
+			String id = input[0];
+			long fee = Long.parseLong(input[1]);
+			long wt = Long.parseLong(input[2]);
+
+			List<String> parentsId = new ArrayList<>();
+			if (input.length > 3) {
+				String[] pids = input[3].split(";");
+				for (String pi : pids)
+					parentsId.add(pi);
+			}
+
+			Node curr_node = new Node(id, fee, wt, parentsId);
+			this.fileData.add(curr_node);
+			this.map.put(id, curr_node);
+		}
+	}
+
 	private void fetchTransactions(String src) {
 		this.fileData = new ArrayList<>();
 		this.map = new HashMap<>();
